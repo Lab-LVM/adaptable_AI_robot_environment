@@ -1,6 +1,7 @@
 # Open World Object Detection
 
-This project contains Pytorch-based object detection for open world. We purpose to identify and characterize unknown instances to assist relieveing confusion within an incremental object detection framework.
+This project contains Pytorch-based object detection for open world. <br/>
+We purpose to identify and characterize unknown instances to assist relieveing confusion within an incremental object detection framework.
 
 ## Tutorial
 

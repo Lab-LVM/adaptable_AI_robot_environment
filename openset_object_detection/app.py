@@ -258,6 +258,7 @@ def signal_handler(sig, frame):
 
 @app.route('/align-dataset', methods=['GET', 'POST'])
 def align_dataset():
+    similarconf = 0.1
     if request.method == 'POST':
         if 'image' not in request.files:
             return jsonify({'error': 'No file part'})
@@ -285,7 +286,6 @@ def align_dataset():
             save_image_directory_path = './save'
             save_label_directory_path = './annosave'
 
-
             save_label = os.listdir(save_label_directory_path)
             vaild_save_label = []
 
@@ -310,7 +310,6 @@ def align_dataset():
                 filename = i.split('.txt')[0]+'.jpg'
                 unknown_save_image.append(filename)
 
-            
             similar_images = []
             for i in unknown_save_image:
                 print('image :', i)
@@ -338,7 +337,7 @@ def align_dataset():
                         label_image = np.array(label_image)
 
                         (score, _) = ssim(label_image, resize_cropped_image, full=True)
-                        if score > 0.1 :
+                        if score > similarconf :
                             similar_images.append(i)
 
             similar_labels = []
