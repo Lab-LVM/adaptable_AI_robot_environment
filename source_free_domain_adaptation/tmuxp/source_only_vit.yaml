@@ -1,0 +1,10 @@
+session_name: face_da_source_only_vit
+windows:
+  - window_name: MFR1
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/source_only.yaml -g '0,' -m r50_vit_base_patch16_224 -s 224 224
+        - python3 main.py fit --config=configs/source_only.yaml -g '0,' -m r50_vit_base_patch16_224 -s 224 224
+        - python3 main.py fit --config=configs/source_only.yaml -g '0,' -m r50_vit_base_patch16_224 -s 224 224

@@ -1,0 +1,57 @@
+session_name: face_experiment1
+windows:
+  - window_name: source_only
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,' --
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,'
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,'
+
+  - window_name: dann
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/dann.yaml -g '6,'
+        - python3 main.py fit --config=configs/dann.yaml -g '6,'
+        - python3 main.py fit --config=configs/dann.yaml -g '6,'
+
+  - window_name: mstn
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+
+
+  - window_name: cdan
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/cdan.yaml -g '2,'
+        - python3 main.py fit --config=configs/cdan.yaml -g '2,'
+        - python3 main.py fit --config=configs/cdan.yaml -g '2'
+
+  - window_name: cdan_e
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '2,'
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '2,'
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '2,'
+
+  - window_name: bsp_dann
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+
+
+  - window_name: bsp_cdan_e
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:

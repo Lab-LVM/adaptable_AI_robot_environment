@@ -1,0 +1,10 @@
+session_name: face_da_trans_da
+windows:
+  - window_name: MFR1
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/transDA.yaml -g '0,'
+        - python3 main.py fit --config=configs/transDA.yaml -g '0,'
+        - python3 main.py fit --config=configs/transDA.yaml -g '0,'

@@ -1,0 +1,13 @@
+session_name: face_cdan
+windows:
+  - window_name: MFR1
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/cdan.yaml -g '2,' -d 'MFR1'
+        - python3 main.py fit --config=configs/cdan.yaml -g '2,' -d 'MFR1'
+        - python3 main.py fit --config=configs/cdan.yaml -g '2,' -d 'MFR1'
+
+
+

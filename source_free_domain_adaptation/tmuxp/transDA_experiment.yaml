@@ -1,0 +1,13 @@
+session_name: transDA
+windows:
+  - window_name: source_only
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+          - python3 main.py fit --config configs/source_only.yaml -g '4,' --seed_everything 2019 -m timm -s 224 224
+          - python3 main.py fit --config configs/source_only.yaml -g '4,' --seed_everything 2020 -m timm -s 224 224
+          - python3 main.py fit --config configs/source_only.yaml -g '4,' --seed_everything 2021 -m timm -s 224 224
+          - python3 main.py fit --config configs/transDA.yaml -g '4,' --seed_everything 2019 -m timm -s 224 224
+          - python3 main.py fit --config configs/transDA.yaml -g '4,' --seed_everything 2020 -m timm -s 224 224
+          - python3 main.py fit --config configs/transDA.yaml -g '4,' --seed_everything 2021 -m timm -s 224 224

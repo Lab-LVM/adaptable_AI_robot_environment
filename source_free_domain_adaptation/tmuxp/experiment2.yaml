@@ -1,0 +1,37 @@
+session_name: face_experiment2
+windows:
+  - window_name: source_only, cdan, bsp+dann, mstn
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,' --seed_everything 2019
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,' --seed_everything 2020
+          - python3 main.py fit --config=configs/source_only.yaml -g '3,' --seed_everything 2021
+          - python3 main.py fit --config=configs/cdan.yaml -g '3,' --seed_everything 2019
+          - python3 main.py fit --config=configs/cdan.yaml -g '3,' --seed_everything 2020
+          - python3 main.py fit --config=configs/cdan.yaml -g '3,' --seed_everything 2021
+          - python3 main.py fit --config=configs/bsp_dann.yaml -g '3,' --seed_everything 2019
+          - python3 main.py fit --config=configs/bsp_dann.yaml -g '3,' --seed_everything 2020
+          - python3 main.py fit --config=configs/bsp_dann.yaml -g '3,' --seed_everything 2021
+          - python3 main.py fit --config=configs/mstn.yaml -g '3,' --seed_everything 2019
+          - python3 main.py fit --config=configs/mstn.yaml -g '3,' --seed_everything 2020
+          - python3 main.py fit --config=configs/mstn.yaml -g '3,' --seed_everything 2021
+
+  - window_name: dann, cdan+e, bsp+cdan+e, shot
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/dann.yaml -g '5,' --seed_everything 2019
+        - python3 main.py fit --config=configs/dann.yaml -g '5,' --seed_everything 2020
+        - python3 main.py fit --config=configs/dann.yaml -g '5,' --seed_everything 2021
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '5,' --seed_everything 2019
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '5,' --seed_everything 2020
+        - python3 main.py fit --config=configs/cdan_e.yaml -g '5,' --seed_everything 2021
+        - python3 main.py fit --config=configs/bsp_cdan_e.yaml -g '5,' --seed_everything 2019
+        - python3 main.py fit --config=configs/bsp_cdan_e.yaml -g '5,' --seed_everything 2020
+        - python3 main.py fit --config=configs/bsp_cdan_e.yaml -g '5,' --seed_everything 2021
+        - python3 main.py fit --config=configs/no_shot.yaml -g '5,' --seed_everything 2019
+        - python3 main.py fit --config=configs/no_shot.yaml -g '5,' --seed_everything 2020
+        - python3 main.py fit --config=configs/no_shot.yaml -g '5,' --seed_everything 2021

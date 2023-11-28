@@ -1,0 +1,9 @@
+session_name: face_intergrated_system
+windows:
+  - window_name: Source Only
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+        - python3 main.py predict --config=configs/intergrated_system.yaml -g '0,' -d 'MFR1'
+

@@ -1,0 +1,11 @@
+session_name: face_test
+windows:
+  - window_name: test
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+          - python3 main.py predict --config=configs/source_only.yaml -g '1,' --seed_everything 2019
+          - python3 main.py predict --config=configs/source_only.yaml -g '1,' --seed_everything 2019
+          - python3 main.py predict --config=configs/source_only.yaml -g '1,' --seed_everything 2020
+          - python3 main.py predict --config=configs/source_only.yaml -g '1,' --seed_everything 2020

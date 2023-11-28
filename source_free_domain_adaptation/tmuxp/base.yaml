@@ -1,0 +1,12 @@
+session_name: face_base
+windows:
+  - window_name: MFR1
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+          - python3 main.py fit --config=configs/dann.yaml -g '0,'
+          - python3 main.py fit --config=configs/cdan.yaml -g '0,'
+          - python3 main.py fit --config=configs/cdan_e.yaml -g '0,'
+          - python3 main.py fit --config=configs/basp_dann.yaml -g '0,'
+          - python3 main.py fit --config=configs/bsp_cdan_e.yaml -g '0,'

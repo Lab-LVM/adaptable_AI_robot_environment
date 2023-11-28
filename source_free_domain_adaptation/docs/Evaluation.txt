@@ -1,0 +1,30 @@
+1. Verification
+Dataset : MFR1(Real) / MFR2 / WHN / LFW 
+Pairs : 3000/3000 (imposit/geniune)
+
+2. Identification (Closed World)
+Dataset : RMFD(Real) 
+class : 403
+
+3. Identification (Open World)
+서양인
+Dataset : MFR2 (Gallery Set, Prove Set) 
+class : 53
+Gallery Set(unmask) : 53
+Prove Set(mask + unmask) : 53 * 4(max)
+
+동양인
+Dataset: WHN (Gallery Set, Prove Set)
+class : 427
+Gallery Set(unmask) : 427
+Prove Set(only mask) : 427 * 4(max)
+
+For Each Training Epoch: 
+Verification(MFR1): UvsM(graph),  
+Identification-Closed(MRF1),  
+=====================================================
+For Final Evaluation
+Model: Best Validation Model or Last Model
+Verification(MFR1, MFR2, WHN, LFW) : UvsU, MvsM, UvsM
+Identification-Open(MFR2,  WHN) : UvsM or UvsU
+=====================================================

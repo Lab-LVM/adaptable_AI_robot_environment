@@ -1,0 +1,13 @@
+session_name: face_bsp_dann
+windows:
+  - window_name: MFR1
+    shell_command_before:
+      - source ~/.bashrc
+    panes:
+      - shell_command:
+        - python3 main.py fit --config=configs/bsp_dann.yaml -g '0,' -d 'MFR1'
+        - python3 main.py fit --config=configs/bsp_dann.yaml -g '0,' -d 'MFR1'
+        - python3 main.py fit --config=configs/bsp_dann.yaml -g '0,' -d 'MFR1'
+
+
+

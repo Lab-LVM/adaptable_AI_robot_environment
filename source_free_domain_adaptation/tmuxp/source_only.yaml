@@ -1,0 +1,10 @@
+session_name: face_source_only
+windows:
+  - window_name: source_only
+    shell_command_before:
+      - source ~/.zshrc
+    panes:
+      - shell_command:
+          - python3 main.py fit --config=configs/source_only.yaml -g '9,' --seed_everything 2019
+          - python3 main.py fit --config=configs/source_only.yaml -g '9,' --seed_everything 2020
+          - python3 main.py fit --config=configs/source_only.yaml -g '9,' --seed_everything 2021
