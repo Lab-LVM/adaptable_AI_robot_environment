@@ -9,9 +9,9 @@ We provide GUI on the web page for convenience of using our methods. <br/>
 run `app.py` and access the guided web page. <br/>
 If you want to match your settings with our development environment, refer the `requirements.txt`. <br/>
 
-### 1. Real-time object tracking
+### 1. Real-time Open world object detection
 
-- If you want to use real-time object tracking by webcam, press `Start Webcam`.
+- If you want to use real-time Open world object detection by webcam, press `Start Webcam`.
 
 ### 2. Make YAML with new label
 
