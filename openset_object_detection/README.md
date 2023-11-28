@@ -4,9 +4,9 @@ This project contains Pytorch-based object detection for open world. We purpose 
 
 ## Tutorial
 
-We provide GUI on the web page for convenience of using our methods.
-run `app.py` and access the guided web page.
-If you want to match your settings with our development environment, refer the `requirements.txt`.
+We provide GUI on the web page for convenience of using our methods. <br/>
+run `app.py` and access the guided web page. <br/>
+If you want to match your settings with our development environment, refer the `requirements.txt`. <br/>
 
 ### 1. Real-time object tracking
 
